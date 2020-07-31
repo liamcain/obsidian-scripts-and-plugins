@@ -1,0 +1,18 @@
+.markdown-embed {
+  padding-left: 10px;
+  padding-right: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.internal-embed img {
+  max-height: 300px;
+}
+
+.markdown-embed-title,
+.file-embed-title {
+  color: var(--dark3);
+  font-family: "Avenir Next";
+  font-size: 16px;
+  text-align: left;
+}

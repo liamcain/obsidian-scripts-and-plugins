@@ -1,0 +1,12 @@
+a,
+.cm-hmd-internal-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover,
+.cm-hmd-internal-link:hover,
+.cm-url {
+  color: var(--text-a-hover);
+  text-decoration: none;
+}

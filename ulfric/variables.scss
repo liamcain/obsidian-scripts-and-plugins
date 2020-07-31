@@ -1,0 +1,55 @@
+:root {
+  --dark0: #2e3440;
+  --dark1: #3b4252;
+  --dark2: #434c5e;
+  --dark3: #4c566a;
+
+  --light0: #d8dee9;
+  --light1: #e5e9f0;
+  --light2: #eceff4;
+
+  --frost0: #8fbcbb;
+  --frost1: #88c0d0;
+  --frost2: #81a1c1;
+  --frost3: #5e81ac;
+
+  --red: #bf616a;
+  --orange: #d08770;
+  --yellow: #ebcb8b;
+  --green: #a3be8c;
+  --purple: #b48ead;
+}
+
+.theme-dark,
+.theme-light {
+  --font-monospace: "Fira Code";
+  --background-primary: var(--dark0);
+  --background-primary-alt: var(--dark0);
+  --background-secondary: var(--dark1);
+  --background-secondary-alt: var(--dark2);
+  --text-normal: var(--light2);
+  --text-faint: rgba(255, 255, 255, 0.2);
+  --text-muted: var(--light0);
+  --text-title-h1: var(--purple);
+  --text-title-h2: var(--orange);
+  --text-title-h3: var(--yellow);
+  --text-title-h4: var(--green);
+  --text-title-h5: var(--red);
+  --text-link: var(--frost0);
+  --text-a: var(--frost3);
+  --text-a-hover: var(--frost2);
+  --text-mark: var(--yellow);
+  --pre-code: var(--dark1);
+  --text-highlight-bg: var(--dark3);
+  --interactive-accent: var(--frost0);
+  --interactive-before: var(--dark3);
+  --background-modifier-border: var(--dark2);
+  --text-accent: var(--purple);
+  --interactive-accent-rgb: var(--orange);
+  --inline-code: var(--frost1);
+  --code-block: var(--frost1);
+  --vim-cursor: var(--orange);
+  --text-selection: rgba(30, 150, 220, 0.2);
+  --scrollbar-bg: var(--dark1);
+  --scrollbar-thumb-bg: var(--dark0);
+}

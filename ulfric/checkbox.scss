@@ -1,0 +1,7 @@
+.checkbox-container {
+  background-color: var(--interactive-before);
+
+  &:after {
+    background-color: var(--background-secondary-alt);
+  }
+}

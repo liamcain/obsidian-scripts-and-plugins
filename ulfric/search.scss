@@ -1,0 +1,73 @@
+$PANEL_SIDE_MARGINS: 8px;
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"] {
+  height: 40px;
+  min-height: 40px;
+  padding: 8px 16px;
+}
+
+input.search-input {
+  background-color: var(--dark0);
+  border: none;
+  margin: 0 12px;
+  width: calc(100% - 24px);
+}
+
+.search-empty-state {
+  color: var(--text-faint);
+}
+
+.search-result {
+  background-color: var(--dark0);
+  border-radius: 4px;
+  margin-bottom: 8px;
+  padding: 4px;
+}
+
+.search-result-file-title {
+  color: var(--text-muted);
+  padding: 4px 8px;
+  span:last-child {
+    font-weight: 600;
+    margin-left: 20px;
+  }
+}
+
+.search-result-file-match {
+  border-radius: 4px;
+  padding: 4px 8px;
+}
+
+.search-result-file-matched-text {
+  background: var(--frost3);
+  border-radius: 4px;
+  color: var(--dark0);
+  font-weight: 600;
+  padding: 2px;
+  font-size: 92%;
+}
+
+.search-result-container {
+  margin: 0;
+  padding: 4px 12px;
+}
+
+.nav-action-button {
+  border-radius: 4px;
+  height: 24px;
+  margin: 2px 4px;
+  padding: 2px 4px;
+
+  &:hover,
+  &.is-active {
+    color: var(--dark0);
+    background: var(--text-accent);
+  }
+}
+
+.search-info-container {
+  margin: 4px 0;
+}

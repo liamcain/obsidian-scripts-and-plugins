@@ -1,0 +1,19 @@
+.workspace-leaf-content .view-content {
+  padding: 8px 0;
+}
+
+.workspace-leaf-resize-handle {
+  background-color: var(--interactive-normal);
+}
+
+.workspace-leaf.mod-active .view-header {
+  border-bottom: none;
+}
+
+.view-actions a {
+  color: var(--text-normal);
+
+  &:hover {
+    color: var(--text-a);
+  }
+}

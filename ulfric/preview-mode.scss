@@ -1,0 +1,36 @@
+.markdown-preview-view {
+  font-size: 16px;
+  padding-left: 48px;
+  padding-right: 48px;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    margin: 24px 0;
+  }
+
+  hr {
+    margin: 32px 0;
+  }
+}
+
+.markdown-preview-section {
+  pre code,
+  code {
+    background-color: var(--pre-code);
+  }
+
+  pre code {
+    padding: 4px;
+    line-height: 1.4em;
+    display: block;
+    color: var(--code-block);
+  }
+
+  code {
+    color: var(--inline-code);
+  }
+}

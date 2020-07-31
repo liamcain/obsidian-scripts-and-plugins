@@ -1,0 +1,8 @@
+button.mod-cta {
+  background-color: var(--frost3);
+  font-weight: 600;
+
+  &:hover {
+    background-color: var(--interactive-before);
+  }
+}

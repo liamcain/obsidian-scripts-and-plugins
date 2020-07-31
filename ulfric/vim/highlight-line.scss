@@ -1,0 +1,4 @@
+/*an active line highlight in vim normal mode */
+.mod-active .cm-fat-cursor .CodeMirror-activeline .CodeMirror-linebackground {
+  background-color: rgba(89, 75, 95, 0.3) !important;
+}

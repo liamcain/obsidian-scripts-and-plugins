@@ -1,0 +1,80 @@
+$fontsize-heading1: 34px;
+$fontsize-heading2: 26px;
+$fontsize-heading3: 22px;
+$fontsize-heading4: 20px;
+$fontsize-heading5: 18px;
+$fontsize-heading6: 18px;
+
+html,
+body {
+  // font-size: 16px;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 500;
+}
+
+strong,
+.cm-s-obsidian .cm-strong {
+  font-weight: 700;
+}
+
+th,
+.cm-s-obsidian .cm-header,
+.markdown-embed-title {
+  font-weight: 500;
+}
+
+.markdown-preview-view {
+  font-family: "Avenir Next";
+
+  .cm-header,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
+    font-family: "Georgia";
+  }
+}
+
+.markdown-source-view {
+  font-family: var(--font-monospace);
+}
+
+.cm-header-1,
+.markdown-preview-section h1 {
+  font-size: $fontsize-heading1;
+  color: var(--text-title-h1);
+}
+
+.cm-header-2,
+.markdown-preview-section h2 {
+  font-size: $fontsize-heading2;
+  color: var(--text-title-h2);
+}
+
+.cm-header-3,
+.markdown-preview-section h3 {
+  font-size: $fontsize-heading3;
+  color: var(--text-title-h3);
+}
+
+.cm-header-4,
+.markdown-preview-section h4 {
+  font-size: $fontsize-heading4;
+  color: var(--text-title-h4);
+}
+
+.cm-header-5,
+.cm-header-6,
+.markdown-preview-section h5,
+.markdown-preview-section h6 {
+  font-size: $fontsize-heading5;
+  color: var(--text-title-h5);
+}
