@@ -2,6 +2,22 @@
 
 Dragonglass is a collection of scripts and themes used to power my [Obsidian](http://obsidian.md) workflow. Note, everything here is very Work-In-Progress and likely only works on my own computer!
 
+## Instructions
+
+### Volcano Plugins
+
+The Volcano plugins are written in ES6, so you'll need to transpile them with babel before you can drop them into your Volcano plugins directory.
+
+```
+$ cd <dragonglass_dir>/volcano_plugins
+$ npm install
+$ npm run build
+```
+
+```
+$ cp <dragonglass_dir>/volcano_plugins/build ~/volcano/plugins/
+```
+
 ## Contents
 
 ### [Volcano](https://github.com/kognise/volcano) Plugins
