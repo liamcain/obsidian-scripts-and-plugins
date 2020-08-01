@@ -50,7 +50,7 @@ class NoteWithTemplatePlugin {
 
     if (this._fileExistsInVault(todaysFilename)) {
       console.info(`${todaysFilename} exists. Opening...`);
-      this._openFile(todaysFilename);
+      this._openFileByName(todaysFilename);
       return;
     }
 
