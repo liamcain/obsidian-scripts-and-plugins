@@ -1,0 +1,18 @@
+{
+  "name": "dragonglass",
+  "version": "1.0.0",
+  "description": "",
+  "main": "noteWithTemplate.js",
+  "dependencies": {
+    "handlebars": "^4.7.6"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.10.5",
+    "@babel/core": "^7.11.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

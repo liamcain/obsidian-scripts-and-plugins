@@ -1,2 +1,4 @@
 # Sass
 *.css.map
+*.pyc
+node_modules/
