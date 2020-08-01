@@ -2,7 +2,7 @@ import Handlebars from "handlebars";
 import fs from "fs";
 
 const dailyNoteSkeleton = fs
-  .readFileSync("/Users/liam/volcano/templates/daily_note.hbs")
+  .readFileSync("~/volcano/templates/daily_note.hbs")
   .toString();
 const dailyNoteTemplate = Handlebars.compile(dailyNoteSkeleton);
 

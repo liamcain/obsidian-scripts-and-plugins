@@ -18,7 +18,7 @@ def formatted_date(date_str: str):
 
 
 def format_date_files():
-    for filepath in glob("/Users/liam/Documents/Notes/*.md"):
+    for filepath in glob("~/Documents/Notes/*.md"):
         # print(f'found file {filepath}')
         file_name = Path(filepath).stem
 
