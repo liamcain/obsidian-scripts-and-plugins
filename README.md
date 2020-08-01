@@ -1,8 +1,14 @@
 # Dragonglass
 
-Dragonglass is a collection of scripts and themes used to power my [Obsidian](http://obsidian.md) workflow.
+Dragonglass is a collection of scripts and themes used to power my [Obsidian](http://obsidian.md) workflow. Note, everything here is very Work-In-Progress and likely only works on my own computer!
 
 ## Contents
+
+### [Volcano](https://github.com/kognise/volcano) Plugins
+
+#### **[WIP]** Daily Notes (with dynamic templates)
+
+Based on the existing "Daily Note" plugin in Obsidian, but it renders the template with [Handlebars](https://handlebarsjs.com/). This allows for dynamic content within the template, such as timestamps.
 
 ### Scripts
 
