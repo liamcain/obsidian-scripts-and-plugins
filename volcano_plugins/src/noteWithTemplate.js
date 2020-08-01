@@ -1,16 +1,17 @@
-"use strict";
-
 import Handlebars from "handlebars";
+import fs from "fs";
 
-const dailyNoteSkeleton = require("./templates/daily_note.hbs");
+const dailyNoteSkeleton = fs
+  .readFileSync("/Users/liam/volcano/templates/daily_note.hbs")
+  .toString();
 const dailyNoteTemplate = Handlebars.compile(dailyNoteSkeleton);
 
-export default class NoteWithTemplatePlugin {
+class NoteWithTemplatePlugin {
   constructor() {
     this.id = "note-with-template";
     this.name = "New Note with Template";
     this.description = "Create a new note with a given template";
-    this.defaultOn = true;
+    this.defaultOn = false;
 
     this.app = null;
     this.instance = null;
@@ -45,7 +46,7 @@ export default class NoteWithTemplatePlugin {
       .createNewMarkdownFile("", filename)
       .then(this._openFile.bind(this))
       .then((createdFile) => {
-        this.app.vault.adaper.modify(
+        this.app.vault.modify(
           createdFile,
           dailyNoteTemplate({
             todayHeader: "title", // TODO
@@ -58,3 +59,5 @@ export default class NoteWithTemplatePlugin {
   onEnable() {}
   onLoad() {}
 }
+
+module.exports = () => new NoteWithTemplatePlugin();
