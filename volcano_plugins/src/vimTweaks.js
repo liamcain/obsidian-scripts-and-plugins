@@ -27,6 +27,11 @@ class VimTweaksPlugin {
       defaultSetText(text, linewise, blockwise);
       clipboard.writeText(text);
     };
+
+    // noremap <silent> k gk
+    // noremap <silent> j gj
+    this.CodeMirror.Vim.map("k", "gk");
+    this.CodeMirror.Vim.map("j", "gj");
   }
 
   onDisable() {
