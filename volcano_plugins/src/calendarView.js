@@ -36,9 +36,13 @@ module.exports = () => {
       console.log("setState", arg);
     }
 
-    getIcon() {}
+    getIcon() {
+      return "calendar-with-checkmark";
+    }
+
     getState() {}
     onResize() {}
+
     onOpen(args) {
       console.log("onOpen", args);
     }
@@ -119,6 +123,11 @@ module.exports = () => {
       }
       const { vault, workspace } = this.view.app;
       const fileObj = vault.fileMap[filename];
+
+      if (!fileObj) {
+        // TODO: Display modal asking to create file since it doesn't exist
+        return;
+      }
       workspace.activeLeaf.openFile(fileObj);
     }
 
