@@ -22,6 +22,14 @@ $ cp <dragonglass_dir>/volcano_plugins/build ~/volcano/plugins/
 
 ### [Volcano](https://github.com/kognise/volcano) Plugins
 
+#### Calendar
+
+A widget that shows a calendar view of the current month. Select a day to view that day's daily note.
+
+More features to come soon.
+
+![Calendar view screenshot](img/calendar-view.png)
+
 #### **[WIP]** Daily Notes (with dynamic templates)
 
 Based on the existing "Daily Note" plugin in Obsidian, but it renders the template with [Handlebars](https://handlebarsjs.com/). This allows for dynamic content within the template, such as timestamps.
