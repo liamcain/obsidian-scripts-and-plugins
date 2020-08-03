@@ -28,7 +28,7 @@ A widget that shows a calendar view of the current month. Select a day to view t
 
 More features to come soon.
 
-![Calendar view screenshot](img/calendar-view.png | width=100)
+![Calendar view screenshot](img/calendar-view.png)
 
 #### **[WIP]** Daily Notes (with dynamic templates)
 
