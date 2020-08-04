@@ -12,7 +12,6 @@ function htmlToElements(html) {
 module.exports = () => {
   class CalendarViewType {
     constructor(view) {
-      console.log("view", view);
       this.view = view;
 
       this._openFileByName = this._openFileByName.bind(this);
@@ -25,16 +24,14 @@ module.exports = () => {
     }
 
     load(arg) {
-      console.log("load", arg);
       update();
     }
+
     getDisplayText() {
       return "Calendar";
     }
 
-    setState(arg) {
-      console.log("setState", arg);
-    }
+    setState(arg) {}
 
     getIcon() {
       return "calendar-with-checkmark";
@@ -43,13 +40,9 @@ module.exports = () => {
     getState() {}
     onResize() {}
 
-    onOpen(args) {
-      console.log("onOpen", args);
-    }
+    onOpen() {}
 
-    toggle() {
-      console.log("toggle");
-    }
+    toggle() {}
 
     _getMonthCalendar() {
       const { activeLeaf } = this.view.app.workspace;
@@ -72,7 +65,6 @@ module.exports = () => {
         `;
       const today = moment().date();
       const activeFile = activeLeaf?.view.file?.path;
-      console.log("activefile", activeFile, this.view.app.workspace);
 
       let offset = startDate.isoWeekday() + 1;
       let day = 1;
@@ -107,12 +99,9 @@ module.exports = () => {
       return htmlToElements(calendar);
     }
 
-    close() {
-      console.log("close");
-    }
+    close() {}
 
     open(leaf) {
-      console.log("open. leaf:", leaf);
       this.leaf = leaf;
       this.update();
     }
@@ -146,8 +135,6 @@ module.exports = () => {
         const selectedDate = moment({ day }).format("YYYY-MM-DD");
 
         this._openFileByName(selectedDate);
-
-        setTimeout(this.update, 200);
       });
 
       container.appendChild(heading);
@@ -180,6 +167,9 @@ module.exports = () => {
       this.instance.registerEvent(
         this.app.workspace.on("layout-ready", this.initLeaf.bind(this))
       );
+      this.instance.registerEvent(
+        this.app.workspace.on("file-open", this.refreshLeaves.bind(this))
+      );
     }
 
     onEnable() {
@@ -187,6 +177,12 @@ module.exports = () => {
     }
 
     onLoad() {}
+
+    refreshLeaves() {
+      this.app.workspace
+        .getLeavesOfType(VIEW_TYPE_CALENDAR)
+        .forEach((leaf) => leaf.view.update());
+    }
 
     initLeaf() {
       if (this.app.workspace.getLeavesOfType(VIEW_TYPE_CALENDAR).length) {

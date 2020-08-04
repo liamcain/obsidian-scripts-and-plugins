@@ -45,7 +45,7 @@ module.exports = () => {
       return !!this.app.vault.fileMap[filename];
     }
 
-    _openDailyNote() {
+    async _openDailyNote() {
       const today = moment();
       const todaysFilename = `${today.format("YYYY-MM-DD")}.md`;
 
@@ -60,8 +60,19 @@ module.exports = () => {
         .toString();
       const dailyNoteTemplate = Handlebars.compile(dailyNoteSkeleton);
 
+      const dailyWeather = await fetch(
+        "https://api.weather.gov/gridpoints/OKX/30,34/forecast"
+      );
+      const dailyWeatherJson = await dailyWeather.json();
+      const {
+        temperature,
+        shortForecast,
+      } = dailyWeatherJson.properties.periods[0];
+
       const dailyNoteContents = dailyNoteTemplate({
+        shortForecast,
         todayHeader: today.format("ddd MMMM DD, YYYY"),
+        temperature,
       });
 
       this._createFile(todaysFilename, dailyNoteContents);

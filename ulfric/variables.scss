@@ -17,7 +17,8 @@
   --orange: #d08770;
   --yellow: #ebcb8b;
   --green: #a3be8c;
-  --purple: #b48ead;
+  --purple: rgb(72, 54, 153);
+  --purpleLight: #b48ead;
 }
 
 .theme-dark,
@@ -30,7 +31,7 @@
   --text-normal: var(--light2);
   --text-faint: rgba(255, 255, 255, 0.2);
   --text-muted: var(--light0);
-  --text-title-h1: var(--purple);
+  --text-title-h1: var(--purpleLight);
   --text-title-h2: var(--orange);
   --text-title-h3: var(--yellow);
   --text-title-h4: var(--green);
@@ -44,7 +45,7 @@
   --interactive-accent: var(--frost0);
   --interactive-before: var(--dark3);
   --background-modifier-border: var(--dark2);
-  --text-accent: var(--purple);
+  --text-accent: var(--purpleLight);
   --interactive-accent-rgb: var(--orange);
   --inline-code: var(--frost1);
   --code-block: var(--frost1);

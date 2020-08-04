@@ -13,11 +13,12 @@ thead {
 }
 
 .calendarview__container {
-  overflow: scroll;
+  overflow-y: scroll;
   padding: 0 20px;
 }
 
 .calendarview__table {
+  border: solid 1px var(--dark0);
   border-collapse: collapse;
   width: 100%;
 
