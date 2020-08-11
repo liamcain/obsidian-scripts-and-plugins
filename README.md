@@ -6,6 +6,8 @@ Dragonglass is a collection of scripts and themes used to power my [Obsidian](ht
 
 ### Volcano Plugins
 
+> These require Volcano to be installed and setup on your computer to run. Install instructions can be [found here](https://github.com/kognise/volcano#installation).
+
 The Volcano plugins are written in ES6, so you'll need to transpile them with babel before you can drop them into your Volcano plugins directory.
 
 ```
@@ -15,8 +17,10 @@ $ npm run build
 ```
 
 ```
-$ cp <dragonglass_dir>/volcano_plugins/build ~/volcano/plugins/
+$ ln -s <dragonglass_dir>/volcano_plugins/build ~/volcano/plugins/
 ```
+
+(better install instructions Coming Soon:tm:)
 
 ## Contents
 
