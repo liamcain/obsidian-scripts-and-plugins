@@ -5,11 +5,6 @@ $fontsize-heading4: 20px;
 $fontsize-heading5: 18px;
 $fontsize-heading6: 18px;
 
-html,
-body {
-  // font-size: 16px;
-}
-
 h1,
 h2,
 h3,
@@ -28,23 +23,6 @@ th,
 .cm-s-obsidian .cm-header,
 .markdown-embed-title {
   font-weight: 500;
-}
-
-.markdown-preview-view {
-  font-family: "Avenir Next";
-
-  .cm-header,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    font-family: "Georgia";
-  }
-}
-
-.markdown-source-view {
-  font-family: var(--font-monospace);
 }
 
 .cm-header-1,

@@ -1,14 +1,17 @@
 .markdown-preview-view {
+  font-family: "Avenir Next";
   font-size: 17px;
   padding-left: 48px;
   padding-right: 48px;
 
+  .cm-header,
   h1,
   h2,
   h3,
   h4,
   h5,
   h6 {
+    font-family: "Georgia";
     margin: 24px 0;
   }
 

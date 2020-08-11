@@ -29,6 +29,10 @@ module.exports = () => {
         clipboard.writeText(text);
       };
 
+      unnamedRegister.toString = function () {
+        return clipboard.readText();
+      };
+
       // noremap <silent> k gk
       // noremap <silent> j gj
       this.CodeMirror.Vim.map("k", "gk");
@@ -41,6 +45,7 @@ module.exports = () => {
         "unnamedRegister"
       ];
       unnamedRegister.setText = unnamedRegister.__proto__.setText;
+      unnamedRegister.toString = unnamedRegister.__proto__.toString;
     }
   }
 

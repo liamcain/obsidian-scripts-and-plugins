@@ -1,3 +1,7 @@
+.markdown-source-view {
+  font-family: var(--font-monospace);
+}
+
 .CodeMirror {
   font-family: var(--font-monospace);
   font-size: 14px;
@@ -13,16 +17,20 @@
   padding-right: 48px;
 }
 
+.cm-searching {
+  background-color: rgba(255, 255, 0, 0.2);
+}
+
 .cm-s-obsidian {
   padding-left: 0;
   padding-right: 0;
 
   pre.HyperMD-codeblock {
+    background-color: var(--pre-code);
+    color: var(--code-block);
     line-height: 1.4em;
     padding-left: 4px;
     padding-right: 4px;
-    background-color: var(--pre-code);
-    color: var(--code-block);
   }
 
   pre.HyperMD-header {
