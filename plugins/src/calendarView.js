@@ -23,7 +23,7 @@ module.exports = () => {
       return VIEW_TYPE_CALENDAR;
     }
 
-    load(arg) {
+    load() {
       update();
     }
 
