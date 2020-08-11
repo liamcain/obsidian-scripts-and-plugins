@@ -14,9 +14,23 @@ module.exports = () => {
     constructor(view) {
       this.view = view;
 
+      this.directory = "";
+      this.format = "";
+
       this._openFileByName = this._openFileByName.bind(this);
       this._getMonthCalendar = this._getMonthCalendar.bind(this);
       this.update = this.update.bind(this);
+
+      // XXX: get the daily notes dir
+      // This should instead be a settings menu for the calendar view
+      const dailyNotesPlugin = this.view.app.plugins
+        .getEnabledPlugins()
+        .find((p) => p.plugin.id === "daily-notes");
+
+      dailyNotesPlugin.loadData().then((data) => {
+        this.directory = data["folder"] || "";
+        this.format = data["format"] || "YYYY-MM-DD";
+      });
     }
 
     getViewType() {
@@ -24,24 +38,21 @@ module.exports = () => {
     }
 
     load() {
-      update();
+      this.update();
     }
 
     getDisplayText() {
       return "Calendar";
     }
 
-    setState(arg) {}
-
     getIcon() {
       return "calendar-with-checkmark";
     }
 
     getState() {}
+    setState() {}
     onResize() {}
-
     onOpen() {}
-
     toggle() {}
 
     _getMonthCalendar() {
@@ -75,7 +86,7 @@ module.exports = () => {
           const classes = clsx({
             "calendarview__day--today": day === today,
             "calendarview__day--active":
-              `${moment({ day }).format("YYYY-MM-DD")}.md` === activeFile,
+              `${moment({ day }).format(this.format)}.md` === activeFile,
           });
           if (i < offset || day > startDate.daysInMonth()) {
             calendar += '<td align="center"></td>';
@@ -110,8 +121,11 @@ module.exports = () => {
       if (!filename.endsWith(".md")) {
         filename = filename + ".md";
       }
+
       const { vault, workspace } = this.view.app;
-      const fileObj = vault.fileMap[filename];
+      const fileObj = vault.getAbstractFileByPath(
+        `${this.directory}/${filename}`
+      );
 
       if (!fileObj) {
         // TODO: Display modal asking to create file since it doesn't exist
@@ -132,7 +146,7 @@ module.exports = () => {
       table.addEventListener("click", (event) => {
         const td = event.target.closest("td");
         const day = td.innerHTML;
-        const selectedDate = moment({ day }).format("YYYY-MM-DD");
+        const selectedDate = moment({ day }).format(this.format);
 
         this._openFileByName(selectedDate);
       });
@@ -188,7 +202,7 @@ module.exports = () => {
       if (this.app.workspace.getLeavesOfType(VIEW_TYPE_CALENDAR).length) {
         return;
       }
-      this.app.workspace.getRightLeaf(false).setViewState({
+      this.app.workspace.getRightLeaf().setViewState({
         type: VIEW_TYPE_CALENDAR,
       });
     }
