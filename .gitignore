@@ -2,5 +2,3 @@
 *.css.map
 *.pyc
 node_modules/
-build/
-clean_source.js

@@ -60,14 +60,21 @@ module.exports = () => {
         .toString();
       const dailyNoteTemplate = Handlebars.compile(dailyNoteSkeleton);
 
-      const dailyWeather = await fetch(
-        "https://api.weather.gov/gridpoints/OKX/30,34/forecast"
-      );
-      const dailyWeatherJson = await dailyWeather.json();
-      const {
-        temperature,
-        shortForecast,
-      } = dailyWeatherJson.properties.periods[0];
+      let temperature = "";
+      let shortForecast = "";
+
+      try {
+        const dailyWeather = await fetch(
+          "https://api.weather.gov/gridpoints/OKX/30,34/forecast"
+        );
+        const dailyWeatherJson = await dailyWeather.json();
+        const currentWeather = dailyWeatherJson.properties.periods[0];
+        temperature = currentWeather.temperature;
+        shortForecast = currentWeather.shortForecast;
+      } catch (err) {
+        shortForecast = "???";
+        temperature = "???";
+      }
 
       const dailyNoteContents = dailyNoteTemplate({
         shortForecast,

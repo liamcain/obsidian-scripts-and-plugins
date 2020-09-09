@@ -1,0 +1,57 @@
+.pane-title {
+  font-size: 16px;
+  margin: 12px 16px 0px;
+}
+
+.dragonglass__plugin-list--container {
+  padding: 0 8px;
+
+  h4,
+  p {
+    margin-block-end: 0;
+    margin-block-start: 0;
+  }
+
+  h4 {
+    font-size: 14px;
+    line-height: 24px;
+  }
+
+  p,
+  small {
+    font-size: 12px;
+    line-height: 16px;
+  }
+
+  .plugin-version {
+    font-size: 10px;
+    margin-left: 0.3em;
+    opacity: 0.8;
+  }
+
+  button {
+    display: block;
+    margin-top: 8px;
+  }
+}
+
+.dragonglass__plugin-list--item {
+  margin: 4px 0;
+  padding: 8px;
+
+  &:not(:last-child) {
+    border-bottom: 1px solid var(--dark3);
+  }
+
+  button {
+    display: inline-block;
+  }
+
+  button.hidden {
+    display: none;
+  }
+
+  .installed {
+    background-color: var(--dark0);
+  }
+}

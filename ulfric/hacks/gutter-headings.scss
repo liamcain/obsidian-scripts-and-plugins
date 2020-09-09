@@ -5,3 +5,11 @@
   text-align: right;
   width: 60px;
 }
+
+.CodeMirror-gutter-elt {
+  top: 15px;
+}
+
+.cm-s-obsidian .CodeMirror-gutters {
+  left: 0px !important;
+}

@@ -28,3 +28,7 @@
 @use 'hacks/thin-scrollbar.scss';
 @use 'hacks/gutter-headings.scss';
 @use 'hacks/hide-prompt-instructions.scss';
+@use 'hacks/hide-sidebar-panels.scss';
+
+// Plugins
+@use 'dragonglass.scss';

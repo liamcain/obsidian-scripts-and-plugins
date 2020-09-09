@@ -14,7 +14,7 @@ thead {
 
 .calendarview__container {
   overflow-y: scroll;
-  padding: 0 20px;
+  padding: 0 16px;
 }
 
 .calendarview__table {
@@ -39,6 +39,24 @@ thead {
 
     &:hover {
       background-color: var(--dark0);
+    }
+  }
+
+  .dot-container {
+    line-height: 4px;
+    zoom: 0.6;
+  }
+
+  .calendar-dot {
+    border-radius: 100%;
+    background: var(--frost2);
+    width: 6px;
+    height: 6px;
+    display: inline-block;
+    margin-right: 4px;
+
+    &:last-of-type {
+      margin-right: 0;
     }
   }
 }
