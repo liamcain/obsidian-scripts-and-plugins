@@ -1,0 +1,17 @@
+/* --------------- */
+/* Drag ghost */
+
+.workspace-drop-overlay:before,
+.mod-drag,
+.drag-ghost {
+  opacity: 0.8;
+  border-radius: 0 !important;
+}
+
+.nav-folder-title.is-being-dragged-over {
+  background-color: var(--background-modifier-accent);
+  border-color: var(--background-modifier-accent);
+  border-radius: 0;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+}

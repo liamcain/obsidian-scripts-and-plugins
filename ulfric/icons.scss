@@ -1,0 +1,106 @@
+/* --------------- */
+/* Icons */
+
+.nav-buttons-container {
+  padding: 10px 5px 0px 5px;
+  margin-bottom: 0px !important;
+  justify-content: flex-start;
+  border: 0;
+}
+
+.nav-action-button svg {
+  width: 15px;
+}
+.workspace-ribbon-collapse-btn svg path {
+  stroke-width: 3px;
+}
+.nav-action-button svg path {
+  stroke-width: 2px;
+}
+.view-header-icon,
+.workspace-tab-header,
+.nav-action-button,
+.side-dock-ribbon-tab,
+.view-action {
+  background: transparent;
+  color: var(--text-muted);
+  opacity: 0.4;
+  transition: opacity 0.1s ease-in-out;
+}
+.view-header-icon {
+  opacity: 0;
+}
+.workspace-leaf-content[data-type="search"] .nav-action-button.is-active,
+.workspace-leaf-content[data-type="backlink"] .nav-action-button.is-active,
+.workspace-tab-header.is-active,
+.workspace-leaf-content[data-type="search"] .nav-action-button.is-active {
+  background: transparent;
+  color: var(--text-muted);
+  opacity: 1;
+  transition: opacity 0.1s ease-in-out;
+}
+.view-action:hover,
+.view-header-icon:hover,
+.nav-action-button:hover,
+.workspace-tab-header:hover,
+.side-dock-ribbon-tab:hover,
+.side-dock-ribbon-action:hover {
+  background: transparent;
+  color: var(--text-muted);
+  opacity: 1;
+  transition: opacity 0 ease-in-out;
+}
+.workspace-leaf-content[data-type="search"] .nav-action-button.is-active {
+  background: transparent;
+}
+.nav-action-button,
+.workspace-leaf-content[data-type="search"] .nav-action-button,
+.workspace-leaf-content[data-type="backlink"] .nav-action-button {
+  padding: 0 4px 0 8px;
+  margin: 0;
+}
+.workspace-tab-header-inner {
+  padding: 3px 3px 3px 10px;
+}
+
+/* --------------- */
+/* Sidedock icons */
+
+.workspace-ribbon-collapse-btn,
+.view-action,
+.side-dock-ribbon-tab,
+.side-dock-ribbon-action {
+}
+.workspace-ribbon {
+  border-color: var(--background-modifier-border);
+  background: var(--background-secondary);
+}
+.workspace-ribbon.mod-right {
+  right: 0;
+  position: absolute;
+  background: transparent;
+  border-right: 0;
+}
+.mod-right:not(.is-collapsed) ~ .workspace-split.mod-right-split {
+  margin-right: 0;
+}
+.side-dock-ribbon-action {
+  padding: 6px 0;
+}
+.side-dock-settings {
+  padding-bottom: 5px;
+}
+.side-dock-ribbon {
+  border-left: 0;
+}
+
+/* --------------- */
+/* Toggle switches */
+
+.checkbox-container {
+  background-color: var(--background-modifier-border);
+  border: 1px solid var(--background-modifier-border);
+}
+.checkbox-container.is-enabled {
+  border-color: var(--interactive-accent);
+}

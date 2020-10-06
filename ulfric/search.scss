@@ -4,16 +4,13 @@ input[type="text"],
 input[type="email"],
 input[type="password"],
 input[type="number"] {
-  height: 40px;
-  min-height: 40px;
-  padding: 8px 16px;
-}
-
-input.search-input {
-  background-color: var(--dark0);
+  background-color: var(--dark1);
+  border-radius: 20px;
   border: none;
-  margin: 0 12px;
-  width: calc(100% - 24px);
+  height: 32px;
+  min-height: 32px;
+  padding: 8px 16px;
+  transition: background-color 0.2s ease-in-out;
 }
 
 .search-empty-state {
@@ -29,7 +26,8 @@ input.search-input {
 
 .search-result-file-title {
   color: var(--text-muted);
-  padding: 4px 8px;
+  padding: 4px 8px 4px 24px;
+
   span:last-child {
     font-weight: 600;
     margin-left: 20px;
@@ -70,4 +68,16 @@ input.search-input {
 
 .search-info-container {
   margin: 4px 0;
+}
+
+.workspace-leaf-content .search-input {
+  border-radius: 20px;
+  border: none;
+  font-size: var(--font-small);
+  margin: 8px 12px;
+  width: calc(100% - 24px);
+
+  &:hover {
+    background: var(--dark2);
+  }
 }

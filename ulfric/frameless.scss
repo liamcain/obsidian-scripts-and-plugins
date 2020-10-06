@@ -1,0 +1,127 @@
+/* Frameless mode */
+
+.titlebar,
+.titlebar-inner {
+  background: transparent;
+  position: fixed;
+  top: 0;
+  height: 12px;
+}
+
+.titlebar-text {
+  display: none;
+}
+
+.is-frameless {
+  padding-top: 0px !important;
+}
+
+.view-header {
+  background-color: transparent;
+  padding-left: 40px;
+  height: 40px;
+}
+
+.workspace-split.mod-root {
+  background-color: transparent !important;
+}
+
+.workspace-split.mod-right-split > .workspace-tabs,
+.workspace-split.mod-root .view-header {
+  padding-top: 4px;
+}
+.workspace-split.mod-left-split > .workspace-tabs {
+  padding-top: 24px;
+}
+.workspace-split.mod-right-split > .workspace-tabs ~ .workspace-tabs,
+.workspace-split.mod-left-split > .workspace-tabs ~ .workspace-tabs {
+  padding-top: 0px;
+}
+.is-fullscreen .workspace-split.mod-left-split > .workspace-tabs,
+.is-fullscreen .workspace-split.mod-root .view-header {
+  padding-top: 0px;
+}
+
+/* --------------- */
+/* App Menu ribbon moved to the bottom edge */
+
+.workspace-ribbon.mod-left {
+  position: fixed;
+  border-right: 0px;
+  margin: 0;
+  height: 40px;
+  bottom: 0;
+  top: auto;
+  display: flex;
+  flex-direction: row;
+  background: var(--background-primary);
+  z-index: 17;
+  opacity: 0;
+  transition: opacity 0.25s ease-in-out;
+
+  &:after {
+    content: " ";
+    border-top: 1px solid var(--background-modifier-border);
+    background: var(--background-primary);
+    padding-right: 100vw;
+    pointer-events: none;
+  }
+}
+.side-dock-actions,
+.side-dock-settings {
+  display: flex;
+  border-top: 1px solid var(--background-modifier-border);
+  background: var(--background-primary);
+  margin: 0;
+}
+.workspace-ribbon.mod-left .side-dock-ribbon-action {
+  display: inline-block;
+  padding: 9px 5px 0 12px;
+}
+.workspace-ribbon.mod-left:hover {
+  opacity: 1;
+  transition: opacity 0.25s ease-in-out;
+}
+.workspace-ribbon.mod-left .workspace-ribbon-collapse-btn {
+  border-top: 1px solid var(--background-modifier-border);
+}
+.workspace-split.mod-left-split {
+  margin: 0;
+}
+.workspace-ribbon.mod-right {
+  opacity: 1;
+  height: 40px;
+  position: fixed;
+  top: auto;
+  right: 5px;
+  bottom: 0;
+  z-index: 999;
+}
+.workspace-ribbon-collapse-btn {
+  margin: 0;
+  padding-top: 8px;
+}
+
+.workspace-split.mod-root
+  > .workspace-leaf:first-of-type:last-of-type
+  .view-header {
+  background: transparent;
+}
+
+.titlebar-button-container.mod-left {
+  display: none;
+}
+
+.view-header-title-container:after {
+  display: none;
+}
+
+.workspace-tabs {
+  background: transparent;
+}
+
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle,
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  top: 0;
+  width: 1px;
+}

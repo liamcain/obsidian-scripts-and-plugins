@@ -4,20 +4,25 @@
 // Views
 @use 'ui-frame.scss';
 @use 'edit-mode.scss';
+@use 'frameless.scss';
 @use 'preview-mode.scss';
 @use 'settings.scss';
 
 // Components
 @use 'back-links.scss';
 @use 'checkbox.scss';
+@use 'drag-ghost.scss';
 @use 'embed.scss';
 @use 'graph.scss';
 @use 'highlight.scss';
+@use 'icons.scss';
 @use 'links.scss';
-@use 'search.scss';
 @use 'notification.scss';
-@use 'suggestion-box.scss';
+@use 'scrollbar.scss';
+@use 'search.scss';
+@use 'status-bar.scss';
 @use 'table.scss';
+@use 'workspace.scss';
 
 // Vim
 @use 'vim/cursor.scss';
@@ -25,10 +30,10 @@
 
 // Hacks
 @use 'hacks/blockquote.scss';
-// @use 'hacks/thin-scrollbar.scss';
 @use 'hacks/gutter-headings.scss';
 @use 'hacks/hide-prompt-instructions.scss';
 @use 'hacks/hide-sidebar-panels.scss';
+@use 'hacks/image-zoom.scss';
 
 // Plugins
 @use 'dragonglass.scss';

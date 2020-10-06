@@ -1,0 +1,82 @@
+.nav-header {
+  padding: 0;
+}
+
+.workspace > .workspace-split:not(.mod-root) .workspace-leaf-content {
+  height: calc(100% - 6px);
+}
+
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle {
+  height: 0px;
+  background: transparent;
+  border-bottom: 1px solid var(--background-modifier-border);
+
+  &:hover {
+    border-color: var(--dark2);
+  }
+}
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle {
+  background: transparent;
+  border-left: 1px solid var(--background-modifier-border);
+  width: 0px !important;
+
+  &:hover {
+    border-color: var(--dark2);
+  }
+}
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle {
+  background: transparent;
+  border-right: 1px solid var(--background-modifier-border);
+  width: 0px !important;
+
+  &:hover {
+    border-color: var(--dark2);
+  }
+}
+.workspace-split.mod-right-split > .workspace-leaf-resize-handle:active,
+.workspace-split.mod-horizontal > * > .workspace-leaf-resize-handle:active,
+.workspace-split.mod-vertical > * > .workspace-leaf-resize-handle:active,
+.workspace-split.mod-left-split > .workspace-leaf-resize-handle:active {
+  border-color: var(--purple);
+}
+
+.workspace-tab-container-before,
+.workspace-tab-container-after {
+  width: 0;
+}
+.workspace-leaf {
+  border-left: 0px;
+}
+.mod-horizontal .workspace-leaf {
+  border-bottom: 0px;
+  background-color: transparent;
+}
+
+.workspace-tab-container-inner {
+  background: transparent;
+  border-bottom: 1px solid var(--background-modifier-border);
+  border-radius: 0;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding-left: 5px;
+}
+.workspace-tab-header.is-before-active .workspace-tab-header-inner,
+.workspace-tab-header.is-active,
+.workspace-tab-header.is-after-active,
+.workspace-tab-header.is-after-active .workspace-tab-header-inner,
+.workspace-tab-header.is-before-active,
+.workspace-tab-header.is-after-active {
+  background: transparent;
+}
+.workspace .workspace-tabs {
+  margin-left: 0;
+  padding: 0;
+}
+
+.workspace-tab-header-container {
+  border: 0 !important;
+  height: 36px;
+  background-color: transparent;
+}

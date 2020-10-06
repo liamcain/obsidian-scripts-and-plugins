@@ -42,10 +42,10 @@
   --text-mark: var(--yellow);
   --pre-code: var(--dark1);
   --text-highlight-bg: var(--dark3);
-  --interactive-accent: var(--frost0);
+  --interactive-accent: var(--purple);
   --interactive-before: var(--dark3);
   --interactive-normal: var(--dark3);
-  --background-modifier-border: var(--dark2);
+  --background-modifier-border: var(--dark1);
   --background-modifier-form-field: var(--dark0);
   --background-modifier-form-field-highlighted: var(--dark0);
   --text-accent: var(--purpleLight);
@@ -54,6 +54,6 @@
   --code-block: var(--frost1);
   --vim-cursor: var(--orange);
   --text-selection: rgba(30, 150, 220, 0.2);
-  --scrollbar-bg: var(--dark1);
-  --scrollbar-thumb-bg: var(--dark0);
+  --scrollbar-bg: var(--dark0);
+  --scrollbar-thumb-bg: var(--dark1);
 }
